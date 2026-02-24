@@ -29,18 +29,29 @@
                 }
                 echo "O carro desacelerou. Velociade e igual: " . $this->velocidade . "Km/h <br>";
             }
+
+             public function marca(){
+                echo "Marca do carro: " . $this->marca . "<br>";
+            }
             
         }
         //Objeto
         $meuCarro = new Carro();
+        $meuCarro->marca = "Ferrari";
+        
+        $carro2 = new Carro();
+        $carro2->marca = "Honda";
 
         //Metodos
-        $meuCarro->marca = "Toyota";
+        $meuCarro->marca();
         $meuCarro->acelerar();
         $meuCarro->acelerar(); 
         $meuCarro->acelerar();
         $meuCarro->frear();
         $meuCarro->frear();
+
+        //obj 2
+        $carro2->marca();
     
     
     
